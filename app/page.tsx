@@ -2,9 +2,13 @@ import {
   ArrowRight,
   ArrowUp,
   Clock3,
+  Coffee,
   Mail,
   MapPin,
+  Music,
+  Palette,
   Phone,
+  Sparkles,
 } from 'lucide-react'
 import { Brand } from '@/components/brand'
 import {
@@ -95,7 +99,12 @@ export default function Page() {
         <section className="hero" id="inicio" aria-labelledby="hero-title">
           <div className="wrap hero-grid">
             <div className="hero-copy">
-              <span className="stamp-label">Comunidad de mujeres · Concepción</span>
+              <div className="hero-badge">
+                <span className="hero-badge-dot" />
+                <span className="hero-badge-text">Comunidad de mujeres · Concepción</span>
+                <span className="hero-badge-pill">Encuentros presenciales</span>
+              </div>
+
               <h1 id="hero-title">
                 Unidas, fuertes{' '}
                 <span className="hero-title-accent">
@@ -104,50 +113,121 @@ export default function Page() {
                   <Squiggle className="hero-title-squiggle" />
                 </span>
               </h1>
+
               <p className="hero-lead">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
+
               <div className="hero-actions">
-                <a className="btn" href="#eventos">
-                  Inscríbete
+                <a className="btn hero-btn-cta" href="#eventos">
+                  Inscríbete al próximo encuentro
                   <ArrowRight size={16} aria-hidden="true" />
                 </a>
-                <a className="link-doodle" href="#nosotras">
+                <a className="link-doodle hero-link-story" href="#nosotras">
                   Conoce nuestra historia
                   <ArrowDoodle />
                 </a>
               </div>
+
+              {/* Post-it Note with washi tape */}
               <div className="hero-note">
                 <span className="tape tape--top" aria-hidden="true" />
                 <p className="hand">
-                  No necesitas experiencia, ni acompañante, ni saber bailar. Solo ganas de estar.
+                  No necesitas experiencia, ni acompañante, ni saber bailar. Solo ganas de estar. ♡
                 </p>
                 <HeartDoodle className="hero-note-heart" />
               </div>
-              <div className="hero-list">
-                <span className="hero-list-label">En nuestros encuentros hay</span>
-                <p>
-                  música en vivo <StarDoodle /> baile <StarDoodle /> talleres <StarDoodle />{' '}
-                  sorpresas <StarDoodle /> y más amigas
-                </p>
+
+              {/* Highlight Features with Icons */}
+              <div className="hero-features-wrap">
+                <span className="hero-features-eyebrow">En nuestros encuentros hay</span>
+                <div className="hero-features-grid">
+                  <div className="hero-feature-card">
+                    <span className="hero-feature-icon hero-feature-icon--music">
+                      <Music size={16} aria-hidden="true" />
+                    </span>
+                    <div className="hero-feature-content">
+                      <strong>Música en vivo</strong>
+                      <span>Canciones para disfrutar</span>
+                    </div>
+                  </div>
+                  <div className="hero-feature-card">
+                    <span className="hero-feature-icon hero-feature-icon--dance">
+                      <Sparkles size={16} aria-hidden="true" />
+                    </span>
+                    <div className="hero-feature-content">
+                      <strong>Baile libre</strong>
+                      <span>Alegría sin juicios</span>
+                    </div>
+                  </div>
+                  <div className="hero-feature-card">
+                    <span className="hero-feature-icon hero-feature-icon--once">
+                      <Coffee size={16} aria-hidden="true" />
+                    </span>
+                    <div className="hero-feature-content">
+                      <strong>Once compartida</strong>
+                      <span>Mesa larga y rica charla</span>
+                    </div>
+                  </div>
+                  <div className="hero-feature-card">
+                    <span className="hero-feature-icon hero-feature-icon--art">
+                      <Palette size={16} aria-hidden="true" />
+                    </span>
+                    <div className="hero-feature-content">
+                      <strong>Talleres creativos</strong>
+                      <span>Aprender y crear juntas</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
+            {/* Visual Collage Column */}
             <div className="hero-collage">
               <div className="hero-wash" aria-hidden="true" />
               <FlowerStem className="hero-flower hero-flower--left" />
               <FlowerStem className="hero-flower hero-flower--right" />
 
+              {/* Floating Welcome Stamp */}
+              <div className="hero-float-stamp" aria-hidden="true">
+                <StarDoodle className="hero-stamp-star" />
+                <span className="hand">¡Ven como eres!</span>
+              </div>
+
+              {/* Main Polaroid */}
               <Polaroid
                 src="/hero-woman.png"
                 alt="Ilustración de una mujer con corona, cabello morado y detalles dorados"
-                caption=""
+                caption="Protagonista de tu historia"
                 className="polaroid--hero"
-                sizes="(max-width: 860px) 90vw, 480px"
+                sizes="(max-width: 860px) 90vw, 420px"
                 priority
                 imageClassName="polaroid-image--hero"
               />
+
+              {/* Secondary Overlapping Polaroid */}
+              <div className="hero-mini-polaroid-wrap">
+                <Polaroid
+                  src="/events/encuentro-comunitario.png"
+                  alt="Participantes compartiendo una once juntas"
+                  caption="Nuestra mesa larga"
+                  detail="Concepción"
+                  className="polaroid--mini"
+                  sizes="240px"
+                  tape="gold"
+                />
+              </div>
+
+              {/* Mini Next Event Floating Pill */}
+              <a href="#eventos" className="hero-event-pill">
+                <span className="hero-event-pill-icon">📅</span>
+                <div className="hero-event-pill-info">
+                  <span className="hero-event-pill-tag">Próxima fecha</span>
+                  <strong>Sábado 05 de Diciembre</strong>
+                </div>
+                <ArrowRight size={14} className="hero-event-pill-arrow" aria-hidden="true" />
+              </a>
             </div>
           </div>
         </section>
