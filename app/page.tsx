@@ -168,7 +168,7 @@ export default function Page() {
               <Polaroid
                 src="/hero-woman.png"
                 alt="Ilustración de una mujer con corona, cabello morado y detalles dorados"
-                caption="Retrato de una protagonista"
+                caption=""
                 className="polaroid--hero"
                 sizes="(max-width: 860px) 90vw, 480px"
                 priority

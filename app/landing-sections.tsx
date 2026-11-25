@@ -7,7 +7,6 @@ import {
 } from '@/components/doodles'
 import { Polaroid } from '@/components/polaroid'
 import { SectionHeading } from '@/components/section-heading'
-import { TestimonialForm } from '@/components/testimonial-form'
 
 const contactEmail = 'hola@unidasfuertes.cl'
 
@@ -203,12 +202,6 @@ export function Testimonials() {
           id="testimonials-title"
           description="Palabras que nos regalaron después de un encuentro. Y un espacio para que dejes la tuya, escrita o en video."
           tone="dark"
-          action={
-            <a className="link-doodle" href="#comparte">
-              Comparte la tuya
-              <ArrowUpRight size={15} aria-hidden="true" />
-            </a>
-          }
         />
 
         <div className="notes-board">
@@ -227,8 +220,6 @@ export function Testimonials() {
             </figure>
           ))}
         </div>
-
-        <TestimonialForm />
 
         <p className="notes-footnote hand">Gracias a las que se animaron a contarnos. ♡</p>
       </div>
