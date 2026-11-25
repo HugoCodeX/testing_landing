@@ -61,18 +61,8 @@ const events = [
   },
 ]
 
-const ribbonWords = [
-  'sororidad',
-  'abrazos',
-  'once',
-  'baile',
-  'risas',
-  'historias',
-  'cariño',
-  'concepción',
-]
 
-const footerLinks = [
+  const footerLinks = [
   { href: '#nosotras', label: 'Nosotras' },
   { href: '#eventos', label: 'Eventos' },
   { href: '#galeria', label: 'Galería' },
@@ -86,24 +76,7 @@ function inscriptionLink(title: string) {
   return `mailto:${contactEmail}?subject=${encodeURIComponent(`Inscripción: ${title}`)}`
 }
 
-function Ribbon() {
-  return (
-    <div className="ribbon" aria-hidden="true">
-      <div className="ribbon-track">
-        {[0, 1].map((copy) => (
-          <div className="ribbon-group" key={copy}>
-            {ribbonWords.map((word) => (
-              <span className="ribbon-item" key={`${copy}-${word}`}>
-                {word}
-                <StarDoodle />
-              </span>
-            ))}
-          </div>
-        ))}
-      </div>
-    </div>
-  )
-}
+
 
 export default function Page() {
   const year = new Date().getFullYear()
@@ -114,8 +87,7 @@ export default function Page() {
         Saltar al contenido
       </a>
 
-      <Ribbon />
-      <SiteHeader />
+      
 
       <main id="contenido" tabIndex={-1}>
         <section className="hero" id="inicio" aria-labelledby="hero-title">
