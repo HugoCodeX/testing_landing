@@ -228,9 +228,7 @@ export default function Page() {
                 </li>
               ))}
             </ol>
-            <p className="events-note hand">
-              Los cupos son limitados. Si no puedes venir, avísanos para darle el lugar a otra. ♡
-            </p>
+            
           </div>
         </section>
 
