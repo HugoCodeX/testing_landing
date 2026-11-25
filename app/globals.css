@@ -2966,3 +2966,25 @@ footer[id] {
     animation: none;
   }
 }
+
+@media (max-width: 680px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-signoff {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 680px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-signoff {
+    max-width: 100%;
+    margin-bottom: 24px;
+  }
+}
