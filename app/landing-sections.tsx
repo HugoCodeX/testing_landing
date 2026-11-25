@@ -35,34 +35,34 @@ const testimonials = [
 
 const faqs = [
   {
-    question: '¿Lorem ipsum dolor sit amet?',
+    question: '¿Puedo ir sola o tengo que ir acompañada?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibis ultricies vehicula non arcu.',
+      'Puedes venir completamente sola. La gran mayoría llega sola por primera vez; te recibiremos con los brazos abiertos y desde el primer momento te sentirás acompañada y bienvenida.',
   },
   {
-    question: '¿Consectetur adipiscing elit?',
+    question: '¿Tiene algún costo participar en las actividades?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum id ligula porta felis euismod semper. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
+      'La mayoría de nuestros encuentros son gratuitos o con un aporte voluntario para cubrir la once y los materiales. En la información de cada evento detallamos si requiere alguna colaboración.',
   },
   {
-    question: '¿Phasellus porta?',
+    question: '¿Necesito saber bailar o tener experiencia previa?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibis ultricies vehicula non arcu.',
+      '¡Para nada! No requieres ninguna experiencia previa ni saber bailar. Acá venimos a disfrutar, aprender juntas y compartir un momento sin presiones ni exigencias.',
   },
   {
-    question: '¿Cras mattis?',
+    question: '¿Cómo me inscribo a los próximos eventos?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Nullam id dolor id nibis ultricies vehicula non arcu.',
+      'Solo debes hacer clic en el botón "Inscribirme" del evento correspondiente o escribirnos directamente a nuestro correo electrónico. Te confirmaremos tu cupo a la brevedad.',
   },
   {
-    question: '¿Dapibus ac facilisis?',
+    question: '¿Dónde se realizan los encuentros?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
+      'Nuestras reuniones se llevan a cabo en distintos espacios comunitarios, salones y parques de Concepción. La dirección exacta y las indicaciones de llegada se detallan en cada actividad.',
   },
   {
-    question: '¿EncerrAR?',
+    question: '¿Puedo invitar a mis amigas, familiares o hijas?',
     answer:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ullamcorper nulla non metus auctor fringilla. Cras justo odio, dapibus ac facilisis in, egestas eget quam.',
+      '¡Claro que sí! Todas las mujeres son bienvenidas: amigas, mamás, hermanas, hijas o vecinas. Solo te pedimos inscribir a cada asistente para coordinar bien el espacio y la once.',
   },
 ]
 export function AboutSection() {

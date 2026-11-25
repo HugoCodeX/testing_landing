@@ -1,5 +1,6 @@
 import {
   ArrowRight,
+  ArrowUp,
   Clock3,
   Mail,
   MapPin,
@@ -62,7 +63,8 @@ const events = [
 ]
 
 
-  const footerLinks = [
+const footerLinks = [
+  { href: '#inicio', label: 'Inicio' },
   { href: '#nosotras', label: 'Nosotras' },
   { href: '#eventos', label: 'Eventos' },
   { href: '#galeria', label: 'Galería' },
@@ -87,7 +89,7 @@ export default function Page() {
         Saltar al contenido
       </a>
 
-      
+      <SiteHeader />
 
       <main id="contenido" tabIndex={-1}>
         <section className="hero" id="inicio" aria-labelledby="hero-title">
@@ -103,8 +105,8 @@ export default function Page() {
                 </span>
               </h1>
               <p className="hero-lead">
-                Nos juntamos a compartir la once, bailar sin vergüenza y recordar que no estamos
-                solas. Acá cada una llega como es y se queda porque se siente en casa.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
               </p>
               <div className="hero-actions">
                 <a className="btn" href="#eventos">
@@ -212,16 +214,22 @@ export default function Page() {
       </main>
 
       <footer className="footer" id="contacto">
-
-      
+        <div className="wrap">
           <div className="footer-signoff">
-            <FlowerMark className="footer-flower" />
-            <p className="hand">
-              Gracias por estar acá.
-              <br />
-              Nos vemos en la próxima mesa.
-            </p>
+            <div className="footer-signoff-copy">
+              <FlowerMark className="footer-flower" />
+              <p className="hand">
+                Gracias por estar acá.
+                <br />
+                Nos vemos en la próxima mesa.
+              </p>
+            </div>
+            <a className="btn footer-cta-btn" href="#eventos">
+              Inscríbete al próximo encuentro
+              <ArrowRight size={15} aria-hidden="true" />
+            </a>
           </div>
+
           <div className="footer-top">
             <div className="footer-brand">
               <Brand light />
@@ -229,36 +237,76 @@ export default function Page() {
                 Un espacio hecho para todas
                 <HeartDoodle />
               </p>
+              <p className="footer-bio">
+                Comunidad de mujeres en Concepción reunidas para compartir la once,
+                conversar, bailar y celebrar juntas.
+              </p>
+              <div className="footer-social-links">
+                <a
+                  href={`mailto:${contactEmail}`}
+                  className="footer-pill-link"
+                  aria-label="Escríbenos por correo"
+                >
+                  <Mail size={14} aria-hidden="true" />
+                  <span>{contactEmail}</span>
+                </a>
+              </div>
             </div>
+
             <nav className="footer-nav" aria-label="Enlaces del pie de página">
               <strong>Explora</strong>
               {footerLinks.map((link) => (
                 <a key={link.href} href={link.href}>
+                  <ArrowRight size={12} className="footer-link-arrow" aria-hidden="true" />
                   {link.label}
                 </a>
               ))}
             </nav>
+
             <div className="footer-contact">
-              <strong>Escríbenos</strong>
+              <strong>Contacto</strong>
               <a href={`mailto:${contactEmail}`}>
-                <Mail size={15} aria-hidden="true" />
-                {contactEmail}
+                <span className="footer-icon-badge">
+                  <Mail size={15} aria-hidden="true" />
+                </span>
+                <span>
+                  <small>Escríbenos</small>
+                  {contactEmail}
+                </span>
               </a>
               <a href="tel:+56912345678">
-                <Phone size={15} aria-hidden="true" />
-                +56 9 1234 5678
+                <span className="footer-icon-badge">
+                  <Phone size={15} aria-hidden="true" />
+                </span>
+                <span>
+                  <small>Llámanos o WhatsApp</small>
+                  +56 9 1234 5678
+                </span>
               </a>
-              <span>
-                <MapPin size={15} aria-hidden="true" />
-                Concepción, Chile
-              </span>
+              <div className="footer-location-item">
+                <span className="footer-icon-badge">
+                  <MapPin size={15} aria-hidden="true" />
+                </span>
+                <span>
+                  <small>Encuentros en</small>
+                  Concepción, Chile
+                </span>
+              </div>
             </div>
           </div>
+
           <div className="footer-bottom">
             <span>© {year} Unidas, Fuertes y Protagonistas.</span>
-            <span>Hecho a mano, con cariño.</span>
+            <span className="footer-bottom-hand">
+              Hecho a mano, con cariño <HeartDoodle className="footer-heart-inline" />
+            </span>
+            <a href="#inicio" className="footer-back-to-top" aria-label="Volver al inicio">
+              <span>Volver arriba</span>
+              <ArrowUp size={14} aria-hidden="true" />
+            </a>
           </div>
-        </footer>
+        </div>
+      </footer>
     </>
   )
 }
