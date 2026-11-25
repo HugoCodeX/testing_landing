@@ -297,9 +297,6 @@ export default function Page() {
 
           <div className="footer-bottom">
             <span>© {year} Unidas, Fuertes y Protagonistas.</span>
-            <span className="footer-bottom-hand">
-              Hecho a mano, con cariño <HeartDoodle className="footer-heart-inline" />
-            </span>
             <a href="#inicio" className="footer-back-to-top" aria-label="Volver al inicio">
               <span>Volver arriba</span>
               <ArrowUp size={14} aria-hidden="true" />
